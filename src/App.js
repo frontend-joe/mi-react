@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Sidebar from "components/layout/Sidebar";
+import FirstSlide from "components/feature/carousel/FirstSlide";
+import ResultSlide from "components/feature/carousel/ResultSlide";
+import DevSlide from "components/feature/carousel/DevSlide";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Sidebar />
+      <Switch>
+        <Route path="/first-slide" exact component={FirstSlide} />
+        <Route path="/result-slide" exact component={ResultSlide} />
+        <Route path="/dev-slide" exact component={DevSlide} />
+      </Switch>
+    </Router>
   );
 }
 
