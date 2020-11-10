@@ -8,8 +8,12 @@ const StyledMiddle = styled.div`
   justify-content: ${(props) => props.justifyContent || "center"};
 `;
 
-const Middle = ({ children, alignItems, justifyContent }) => (
-  <StyledMiddle alignItems={alignItems} justifyContent={justifyContent}>
+const Middle = ({ children, alignItems, justifyContent, ...rest }) => (
+  <StyledMiddle
+    {...rest}
+    alignItems={alignItems}
+    justifyContent={justifyContent}
+  >
     {children}
   </StyledMiddle>
 );

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import frontendJoe from "assets/images/frontendjoe.png";
+import frontendJoeLight from "assets/images/frontendjoe-light.png";
 import { MatIcon } from "components/shared";
 
 const BottomRow = styled.div`
@@ -29,7 +30,9 @@ const Bottom = ({ isDark, isFirstSlide, seriesNumber, seriesNumberColor }) => (
     <StyledNumber seriesNumberColor={seriesNumberColor}>
       {seriesNumber}
     </StyledNumber>
-    {!isFirstSlide && <FrontendJoe src={frontendJoe} />}
+    {!isFirstSlide && (
+      <FrontendJoe src={isDark ? frontendJoeLight : frontendJoe} />
+    )}
     {isFirstSlide && <MatIcon>bookmark_outline</MatIcon>}
   </BottomRow>
 );

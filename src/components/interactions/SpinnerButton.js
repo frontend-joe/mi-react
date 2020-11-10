@@ -38,9 +38,9 @@ const Spinner = styled.span`
   border-radius: 50%;
   border-width: 5px;
   border-style: solid;
-  border-color: ${rgba("white", 0.25)};
+  border-color: ${rgba("white", 0.1)};
   border-top-color: white;
-  animation: ${spin} 1s infinite linear;
+  animation: ${spin} 1.25s infinite linear;
 `;
 
 const fadeIn = keyframes`
@@ -70,6 +70,8 @@ const Button = styled.button`
   height: 64px;
   border-radius: 0.5rem;
   letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 1.1rem;
   color: white;
   outline: none;
   cursor: pointer;
@@ -102,7 +104,7 @@ const SpinnerButton = () => {
           >
             check
           </span>{" "}
-          Finished
+          All Done
         </>
       )}
       <SpinnerWrapper isOpen={isLoading}>

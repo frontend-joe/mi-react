@@ -1,16 +1,17 @@
 import React from "react";
 import { Bottom, Frame, FrameWrapper, Middle, Top } from "./shared";
-import Interaction from "components/interactions/NeumorphicSwitch";
+import Interaction from "components/interactions/TypingIndicator";
 
-const ResultSlide = ({}) => (
+const ResultSlide = () => (
   <FrameWrapper>
-    <Frame background="#6c4aad">
+    <Frame background="#6F2ADF">
       <Top isDark />
       <Middle>
-        <Interaction color="#040404" />
+        <Interaction />
       </Middle>
       <Bottom
-        seriesNumber="#24"
+        isDark
+        seriesNumber="#29"
         seriesNumberColor="rgba(255, 255, 255, 0.38)"
       />
     </Frame>

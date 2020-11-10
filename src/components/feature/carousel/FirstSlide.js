@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { rgba } from "polished";
 import { Bottom, Frame, FrameWrapper, Middle, Top } from "./shared";
 import joe from "assets/images/frontendjoe.png";
-import collab from "assets/images/izzy.png";
-import Interaction from "components/interactions/NeumorphicSwitch";
+import joeLight from "assets/images/frontendjoe-light.png";
+import collab from "assets/images/adam.png";
+import Interaction from "components/interactions/TypingIndicatorExample";
 
 const StyledBackgroundText = styled.div`
   position: absolute;
@@ -26,8 +27,8 @@ const StyledContent = styled.div`
 
 const StyledInteraction = styled.div`
   position: absolute;
-  right: 167px;
-  bottom: 195px;
+  right: 92px;
+  bottom: 16px;
 `;
 
 const StyledNumber = styled.div`
@@ -54,7 +55,7 @@ const StyledTitleLongText = styled.div`
 
 const StyledImageWrapper = styled.div`
   display: inline-block;
-  transform: translateX(${({ isLast }) => (isLast ? "-30px" : "0")});
+  transform: translateX(${({ isLast }) => (isLast ? "-33px" : "0")});
 `;
 
 const StyledImage = styled.img`
@@ -66,32 +67,32 @@ const StyledImage = styled.img`
 
 const StyledImageText = styled.div`
   font-size: 11px;
-  color: ${rgba("white", 0.38)};
+  color: ${rgba("white", 0.55)};
   padding-left: ${({ isLast }) => (isLast ? "22px" : "0px")};
 `;
 
 const FirstSlide = ({}) => (
   <FrameWrapper>
-    <Frame background="#6c4aad">
-      <StyledBackgroundText>Neumorphic</StyledBackgroundText>
+    <Frame background="#6F2ADF">
+      <StyledBackgroundText>Typing</StyledBackgroundText>
       <Top isDark />
       <Middle alignItems="flex-start" justifyContent="flex-start">
         <StyledContent>
-          <StyledNumber>#24</StyledNumber>
+          <StyledNumber>#29</StyledNumber>
           <StyledTitle>
             The
             <br />
-            <StyledTitleLongText>Neumorphic</StyledTitleLongText>
-            Switch
+            <StyledTitleLongText>Typing</StyledTitleLongText>
+            Indicator
           </StyledTitle>
           <div style={{ marginBottom: "4px" }}>
             <StyledImageWrapper>
-              <StyledImage src={joe} />
+              <StyledImage src={joeLight} />
               <StyledImageText>@frontendjoe</StyledImageText>
             </StyledImageWrapper>
             <StyledImageWrapper isLast>
               <StyledImage src={collab} />
-              <StyledImageText isLast>@izzydesignideas</StyledImageText>
+              <StyledImageText isLast>@appsbyadam</StyledImageText>
             </StyledImageWrapper>
           </div>
         </StyledContent>
@@ -99,7 +100,7 @@ const FirstSlide = ({}) => (
           <Interaction color="white" />
         </StyledInteraction>
       </Middle>
-      <Bottom isFirstSlide seriesNumber="#24" />
+      <Bottom isFirstSlide isDark seriesNumber="#29" />
     </Frame>
   </FrameWrapper>
 );
