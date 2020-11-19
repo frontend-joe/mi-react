@@ -15,18 +15,18 @@ const StyledTop = styled("div")`
 `;
 
 const StyledTitle = styled.div`
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 500;
   color: ${({ isDark }) => (isDark ? rgba("white", 0.38) : "#ACAAB7")};
 `;
 
 const StyledArrow = styled.img`
-  width: 28px;
+  width: 24px;
 `;
 
 const Top = ({ isDark }) => (
   <StyledTop>
-    <StyledTitle isDark={isDark}>React MI</StyledTitle>
+    <StyledTitle isDark={isDark}>React</StyledTitle>
     <StyledArrow src={isDark ? arrowForDark : arrow} />
   </StyledTop>
 );

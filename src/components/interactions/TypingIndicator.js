@@ -10,9 +10,9 @@ const Wrapper = styled.div`
 
 const Dot = styled.span`
   display: inline-block;
-  width: ${(p) => p.dotSize || 10}px;
-  height: ${(p) => p.dotSize || 10}px;
-  margin: 0 ${(p) => (p.dotSize || 10) * 0.26}px;
+  width: ${(p) => p.dotSize || 5}px;
+  height: ${(p) => p.dotSize || 5}px;
+  margin: 0 ${(p) => (p.dotSize || 5) * 0.26}px;
   border-radius: 50%;
   background: #c4bbd0;
 `;

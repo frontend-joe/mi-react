@@ -4,8 +4,8 @@ import { rgba } from "polished";
 import { Bottom, Frame, FrameWrapper, Middle, Top } from "./shared";
 import joe from "assets/images/frontendjoe.png";
 import joeLight from "assets/images/frontendjoe-light.png";
-import collab from "assets/images/adam.png";
-import Interaction from "components/interactions/TypingIndicatorExample";
+import collab from "assets/images/mike.png";
+import Interaction from "components/interactions/SlideUpDialog";
 
 const StyledBackgroundText = styled.div`
   position: absolute;
@@ -27,8 +27,11 @@ const StyledContent = styled.div`
 
 const StyledInteraction = styled.div`
   position: absolute;
-  right: 92px;
-  bottom: 16px;
+  top: 0;
+  left: 0;
+  ${"" /* left: 50%;
+  bottom: 184px;
+  transform: translateX(-50%); */}
 `;
 
 const StyledNumber = styled.div`
@@ -45,7 +48,7 @@ const StyledTitle = styled.div`
   font-weight: 500;
   line-height: 92px;
   letter-spacing: -1px;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2.75rem;
   color: ${rgba("#fff", 0.96)};
 `;
 
@@ -73,34 +76,36 @@ const StyledImageText = styled.div`
 
 const FirstSlide = ({}) => (
   <FrameWrapper>
-    <Frame background="#6F2ADF">
-      <StyledBackgroundText>Typing</StyledBackgroundText>
+    <Frame background="#702CDD">
+      <StyledBackgroundText>Slide Up</StyledBackgroundText>
       <Top isDark />
       <Middle alignItems="flex-start" justifyContent="flex-start">
         <StyledContent>
-          <StyledNumber>#29</StyledNumber>
+          <StyledNumber>#32</StyledNumber>
           <StyledTitle>
             The
             <br />
-            <StyledTitleLongText>Typing</StyledTitleLongText>
-            Indicator
+            <StyledTitleLongText>Slide Up</StyledTitleLongText>
+            Dialog
           </StyledTitle>
           <div style={{ marginBottom: "4px" }}>
             <StyledImageWrapper>
               <StyledImage src={joeLight} />
               <StyledImageText>@frontendjoe</StyledImageText>
             </StyledImageWrapper>
-            <StyledImageWrapper isLast>
-              <StyledImage src={collab} />
-              <StyledImageText isLast>@appsbyadam</StyledImageText>
-            </StyledImageWrapper>
+            {false && (
+              <StyledImageWrapper isLast>
+                <StyledImage src={collab} />
+                <StyledImageText isLast>@bydanromero</StyledImageText>
+              </StyledImageWrapper>
+            )}
           </div>
         </StyledContent>
         <StyledInteraction>
           <Interaction color="white" />
         </StyledInteraction>
       </Middle>
-      <Bottom isFirstSlide isDark seriesNumber="#29" />
+      <Bottom isFirstSlide isDark seriesNumber="#32" />
     </Frame>
   </FrameWrapper>
 );
