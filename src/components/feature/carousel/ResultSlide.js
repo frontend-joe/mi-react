@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Bottom, Frame, FrameWrapper, Middle, Top } from "./shared";
-import Interaction from "components/interactions/SlideUpDialog";
+import Interaction from "components/interactions/ToastifyAlert";
 
 const StyledInteraction = styled.div`
   position: absolute;
@@ -11,7 +11,7 @@ const StyledInteraction = styled.div`
 
 const ResultSlide = () => (
   <FrameWrapper>
-    <Frame background="#702CDD">
+    <Frame background="#100F10">
       <Top isDark />
       <Middle>
         <StyledInteraction>
@@ -20,7 +20,7 @@ const ResultSlide = () => (
       </Middle>
       <Bottom
         isDark
-        seriesNumber="#32"
+        seriesNumber="#33"
         seriesNumberColor="rgba(255, 255, 255, 0.38)"
       />
     </Frame>

@@ -5,7 +5,7 @@ import { Bottom, Frame, FrameWrapper, Middle, Top } from "./shared";
 import joe from "assets/images/frontendjoe.png";
 import joeLight from "assets/images/frontendjoe-light.png";
 import collab from "assets/images/mike.png";
-import Interaction from "components/interactions/SlideUpDialog";
+import Interaction from "components/interactions/ToastifyAlert";
 
 const StyledBackgroundText = styled.div`
   position: absolute;
@@ -29,6 +29,8 @@ const StyledInteraction = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   ${"" /* left: 50%;
   bottom: 184px;
   transform: translateX(-50%); */}
@@ -69,28 +71,29 @@ const StyledImage = styled.img`
 `;
 
 const StyledImageText = styled.div`
-  font-size: 11px;
+  font-size: 14px;
+  font-weight: 600;
   color: ${rgba("white", 0.55)};
   padding-left: ${({ isLast }) => (isLast ? "22px" : "0px")};
 `;
 
 const FirstSlide = ({}) => (
   <FrameWrapper>
-    <Frame background="#702CDD">
-      <StyledBackgroundText>Slide Up</StyledBackgroundText>
+    <Frame background="#100F10">
+      <StyledBackgroundText>Toastify</StyledBackgroundText>
       <Top isDark />
       <Middle alignItems="flex-start" justifyContent="flex-start">
         <StyledContent>
-          <StyledNumber>#32</StyledNumber>
+          <StyledNumber>#33</StyledNumber>
           <StyledTitle>
             The
             <br />
-            <StyledTitleLongText>Slide Up</StyledTitleLongText>
-            Dialog
+            <StyledTitleLongText>Toastify</StyledTitleLongText>
+            Alert
           </StyledTitle>
           <div style={{ marginBottom: "4px" }}>
             <StyledImageWrapper>
-              <StyledImage src={joeLight} />
+              <StyledImage src={joe} />
               <StyledImageText>@frontendjoe</StyledImageText>
             </StyledImageWrapper>
             {false && (
@@ -105,7 +108,7 @@ const FirstSlide = ({}) => (
           <Interaction color="white" />
         </StyledInteraction>
       </Middle>
-      <Bottom isFirstSlide isDark seriesNumber="#32" />
+      <Bottom isFirstSlide isDark seriesNumber="#33" />
     </Frame>
   </FrameWrapper>
 );
