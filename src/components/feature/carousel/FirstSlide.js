@@ -5,7 +5,7 @@ import { Bottom, Frame, FrameWrapper, Middle, Top } from "./shared";
 import joe from "assets/images/frontendjoe.png";
 import joeLight from "assets/images/frontendjoe-light.png";
 import collab from "assets/images/mike.png";
-import Interaction from "components/interactions/ToastifyAlert";
+import Interaction from "components/interactions/MinimalNavbar";
 
 const StyledBackgroundText = styled.div`
   position: absolute;
@@ -27,13 +27,10 @@ const StyledContent = styled.div`
 
 const StyledInteraction = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  ${"" /* left: 50%;
-  bottom: 184px;
-  transform: translateX(-50%); */}
+  z-index: 5;
+  bottom: 190px;
+  left: 50%;
+  transform: translateX(-50%);
 `;
 
 const StyledNumber = styled.div`
@@ -80,16 +77,16 @@ const StyledImageText = styled.div`
 const FirstSlide = ({}) => (
   <FrameWrapper>
     <Frame background="#100F10">
-      <StyledBackgroundText>Toastify</StyledBackgroundText>
+      <StyledBackgroundText>Minimal</StyledBackgroundText>
       <Top isDark />
       <Middle alignItems="flex-start" justifyContent="flex-start">
         <StyledContent>
-          <StyledNumber>#33</StyledNumber>
+          <StyledNumber>#36</StyledNumber>
           <StyledTitle>
             The
             <br />
-            <StyledTitleLongText>Toastify</StyledTitleLongText>
-            Alert
+            <StyledTitleLongText>Minimal</StyledTitleLongText>
+            <StyledTitleLongText>Nav</StyledTitleLongText>
           </StyledTitle>
           <div style={{ marginBottom: "4px" }}>
             <StyledImageWrapper>
@@ -108,7 +105,7 @@ const FirstSlide = ({}) => (
           <Interaction color="white" />
         </StyledInteraction>
       </Middle>
-      <Bottom isFirstSlide isDark seriesNumber="#33" />
+      <Bottom isFirstSlide isDark seriesNumber="#36" />
     </Frame>
   </FrameWrapper>
 );

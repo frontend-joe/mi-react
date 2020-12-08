@@ -18,16 +18,16 @@ const FrontendJoe = styled.img`
   height: 40px;
 `;
 
-const StyledNumber = styled.div`
+const StyledNumber = styled("div", { isDark: Boolean })`
   font-size: 26px;
-  font-weight: 500;
+  font-weight: ${(p) => (p.isDark ? 500 : 600)};
   color: ${({ seriesNumberColor }) =>
     seriesNumberColor || "rgba(255, 255, 255, 0.38)"};
 `;
 
 const Bottom = ({ isDark, isFirstSlide, seriesNumber, seriesNumberColor }) => (
   <BottomRow>
-    <StyledNumber seriesNumberColor={seriesNumberColor}>
+    <StyledNumber isDark={isDark} seriesNumberColor={seriesNumberColor}>
       {seriesNumber}
     </StyledNumber>
     {!isFirstSlide && (

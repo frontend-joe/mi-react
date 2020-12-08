@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Bottom, Frame, FrameWrapper, Middle, Top } from "./shared";
-import Interaction from "components/interactions/ToastifyAlert";
+import Interaction from "components/interactions/MinimalNavbar";
 
 const StyledInteraction = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const ResultSlide = () => (
@@ -19,8 +20,7 @@ const ResultSlide = () => (
         </StyledInteraction>
       </Middle>
       <Bottom
-        isDark
-        seriesNumber="#33"
+        seriesNumber="#36"
         seriesNumberColor="rgba(255, 255, 255, 0.38)"
       />
     </Frame>
