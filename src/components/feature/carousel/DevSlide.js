@@ -1,10 +1,10 @@
 import React from "react";
 import { Bottom, Frame, FrameWrapper, Middle, Top } from "./shared";
-import Interaction from "components/interactions/MaskedInput";
+import Interaction from "components/interactions/ModernNavSimple";
 
-const ResultSlide = ({}) => (
+const ResultSlide = () => (
   <FrameWrapper>
-    <Frame background="#1e172b">
+    <Frame background="#361270">
       <Top isDark />
       <Middle>
         <Interaction color="#040404" />

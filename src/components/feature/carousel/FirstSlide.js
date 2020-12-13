@@ -5,7 +5,7 @@ import { Bottom, Frame, FrameWrapper, Middle, Top } from "./shared";
 import joe from "assets/images/frontendjoe.png";
 import joeLight from "assets/images/frontendjoe-light.png";
 import collab from "assets/images/mike.png";
-import Interaction from "components/interactions/MinimalNavbar";
+import Interaction from "components/interactions/ModernNav";
 
 const StyledBackgroundText = styled.div`
   position: absolute;
@@ -28,8 +28,8 @@ const StyledContent = styled.div`
 const StyledInteraction = styled.div`
   position: absolute;
   z-index: 5;
-  bottom: 190px;
-  left: 50%;
+  bottom: -80px;
+  left: 55%;
   transform: translateX(-50%);
 `;
 
@@ -76,16 +76,16 @@ const StyledImageText = styled.div`
 
 const FirstSlide = ({}) => (
   <FrameWrapper>
-    <Frame background="#100F10">
-      <StyledBackgroundText>Minimal</StyledBackgroundText>
+    <Frame background="#361270">
+      <StyledBackgroundText>Modern</StyledBackgroundText>
       <Top isDark />
       <Middle alignItems="flex-start" justifyContent="flex-start">
         <StyledContent>
-          <StyledNumber>#36</StyledNumber>
+          <StyledNumber>#37</StyledNumber>
           <StyledTitle>
             The
             <br />
-            <StyledTitleLongText>Minimal</StyledTitleLongText>
+            <StyledTitleLongText>Modern</StyledTitleLongText>
             <StyledTitleLongText>Nav</StyledTitleLongText>
           </StyledTitle>
           <div style={{ marginBottom: "4px" }}>
@@ -105,7 +105,7 @@ const FirstSlide = ({}) => (
           <Interaction color="white" />
         </StyledInteraction>
       </Middle>
-      <Bottom isFirstSlide isDark seriesNumber="#36" />
+      <Bottom isFirstSlide isDark seriesNumber="#37" />
     </Frame>
   </FrameWrapper>
 );
