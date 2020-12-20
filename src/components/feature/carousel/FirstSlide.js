@@ -5,7 +5,7 @@ import { Bottom, Frame, FrameWrapper, Middle, Top } from "./shared";
 import joe from "assets/images/frontendjoe.png";
 import joeLight from "assets/images/frontendjoe-light.png";
 import collab from "assets/images/mike.png";
-import Interaction from "components/interactions/ModernNav";
+import Interaction from "components/interactions/Carousel2";
 
 const StyledBackgroundText = styled.div`
   position: absolute;
@@ -74,19 +74,19 @@ const StyledImageText = styled.div`
   padding-left: ${({ isLast }) => (isLast ? "22px" : "0px")};
 `;
 
-const FirstSlide = ({}) => (
+const FirstSlide = () => (
   <FrameWrapper>
-    <Frame background="#361270">
-      <StyledBackgroundText>Modern</StyledBackgroundText>
+    <Frame background="#591FAE">
+      <StyledBackgroundText>Carousel</StyledBackgroundText>
       <Top isDark />
       <Middle alignItems="flex-start" justifyContent="flex-start">
         <StyledContent>
-          <StyledNumber>#37</StyledNumber>
+          <StyledNumber>#38</StyledNumber>
           <StyledTitle>
             The
             <br />
-            <StyledTitleLongText>Modern</StyledTitleLongText>
-            <StyledTitleLongText>Nav</StyledTitleLongText>
+            <StyledTitleLongText>Carousel</StyledTitleLongText>
+            Nav
           </StyledTitle>
           <div style={{ marginBottom: "4px" }}>
             <StyledImageWrapper>
@@ -105,7 +105,7 @@ const FirstSlide = ({}) => (
           <Interaction color="white" />
         </StyledInteraction>
       </Middle>
-      <Bottom isFirstSlide isDark seriesNumber="#37" />
+      <Bottom isFirstSlide isDark seriesNumber="#38" />
     </Frame>
   </FrameWrapper>
 );

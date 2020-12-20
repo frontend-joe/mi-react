@@ -27,6 +27,7 @@ const StyledNumber = styled("div", { isDark: Boolean })`
 
 const Bottom = ({ isDark, isFirstSlide, seriesNumber, seriesNumberColor }) => (
   <BottomRow>
+    {!isFirstSlide && <MatIcon>favorite_border</MatIcon>}
     <StyledNumber isDark={isDark} seriesNumberColor={seriesNumberColor}>
       {seriesNumber}
     </StyledNumber>

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Bottom, Frame, FrameWrapper, Middle, Top } from "./shared";
-import Interaction from "components/interactions/ModernNav";
+import Interaction from "components/interactions/Carousel2";
 
 const StyledInteraction = styled.div`
   position: absolute;
@@ -12,18 +12,14 @@ const StyledInteraction = styled.div`
 
 const ResultSlide = () => (
   <FrameWrapper>
-    <Frame background="#361270">
+    <Frame background="#591FAE">
       <Top isDark />
       <Middle>
         <StyledInteraction>
           <Interaction />
         </StyledInteraction>
       </Middle>
-      <Bottom
-        isDark
-        seriesNumber="#37"
-        seriesNumberColor="rgba(255, 255, 255, 0.38)"
-      />
+      <Bottom isDark seriesNumberColor="rgba(255, 255, 255, 0.38)" />
     </Frame>
   </FrameWrapper>
 );
