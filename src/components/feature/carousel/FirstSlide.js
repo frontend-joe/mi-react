@@ -5,7 +5,7 @@ import { Bottom, Frame, FrameWrapper, Middle, Top } from "./shared";
 import joe from "assets/images/frontendjoe.png";
 import joeLight from "assets/images/frontendjoe-light.png";
 import collab from "assets/images/mike.png";
-import Interaction from "components/interactions/Carousel2";
+import Interaction from "components/interactions/Stepper";
 
 const StyledBackgroundText = styled.div`
   position: absolute;
@@ -28,8 +28,12 @@ const StyledContent = styled.div`
 const StyledInteraction = styled.div`
   position: absolute;
   z-index: 5;
-  bottom: -80px;
-  left: 55%;
+
+  left: 50%;
+  bottom: 200px;
+
+  ${"" /* bottom: -80px;
+  left: 55%; */}
   transform: translateX(-50%);
 `;
 
@@ -76,17 +80,17 @@ const StyledImageText = styled.div`
 
 const FirstSlide = () => (
   <FrameWrapper>
-    <Frame background="#591FAE">
-      <StyledBackgroundText>Carousel</StyledBackgroundText>
+    <Frame background="#100F10">
+      <StyledBackgroundText>Form</StyledBackgroundText>
       <Top isDark />
       <Middle alignItems="flex-start" justifyContent="flex-start">
         <StyledContent>
-          <StyledNumber>#38</StyledNumber>
+          <StyledNumber>#39</StyledNumber>
           <StyledTitle>
             The
             <br />
-            <StyledTitleLongText>Carousel</StyledTitleLongText>
-            Nav
+            <StyledTitleLongText>Form</StyledTitleLongText>
+            Stepper
           </StyledTitle>
           <div style={{ marginBottom: "4px" }}>
             <StyledImageWrapper>
@@ -105,7 +109,7 @@ const FirstSlide = () => (
           <Interaction color="white" />
         </StyledInteraction>
       </Middle>
-      <Bottom isFirstSlide isDark seriesNumber="#38" />
+      <Bottom isFirstSlide isDark seriesNumber="#39" />
     </Frame>
   </FrameWrapper>
 );
